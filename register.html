@@ -21,7 +21,16 @@
         <section class="content-page">
             <h2>Join the Protocol</h2>
             <p>Register your farm to become part of a new, equitable supply chain. Secure your craft and your future.</p>
+            
+            <div class="whatsapp-container">
+                <h3>Register via WhatsApp</h3>
+                <p>Click the button below to start the registration process directly in WhatsApp. It's fast and easy.</p>
+                <a href="https://wa.me/18095551234?text=Register" class="whatsapp-button" target="_blank">Register with WhatsApp</a>
+                <div class="divider"><span>OR</span></div>
+            </div>
+
             <div class="form-container">
+                <h3>Register Below</h3>
                 <form id="farmer-registration-form">
                     <div id="form-feedback"></div>
                     <label for="name">Full Name:</label>
@@ -42,13 +51,18 @@
         <p>&copy; 2025 Ethermento LLC. All rights reserved.</p>
     </footer>
     <script>
-        document.getElementById('farmer-registration-form').addEventListener('submit', async function(event) {
+        document.getElementById('farmer-registration-form' ).addEventListener('submit', async function(event) {
             event.preventDefault();
             const form = event.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
+            const button = form.querySelector('button');
+            const data = {
+                name: form.name.value,
+                phone: form.phone.value,
+                province: form.province.value
+            };
             const feedbackEl = document.getElementById('form-feedback');
 
+            button.disabled = true;
             feedbackEl.textContent = 'Submitting...';
             feedbackEl.className = 'feedback-neutral';
 
@@ -59,7 +73,9 @@
                     body: JSON.stringify(data)
                 });
                 const result = await response.json();
-                if (!response.ok) throw new Error(result.message || 'An unknown error occurred.');
+                if (!response.ok) {
+                    throw new Error(result.message || 'An unknown error occurred.');
+                }
                 
                 feedbackEl.textContent = 'Registration successful! We will be in contact soon.';
                 feedbackEl.className = 'feedback-success';
@@ -67,8 +83,11 @@
             } catch (error) {
                 feedbackEl.textContent = 'Error: ' + error.message;
                 feedbackEl.className = 'feedback-error';
+            } finally {
+                button.disabled = false;
             }
         });
     </script>
 </body>
 </html>
+
