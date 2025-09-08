@@ -1,0 +1,82 @@
+:root {
+    --vibrant-umber: #A14F2A;
+    --mango-zest: #FFC947;
+    --cream-parchment: #FDFBF5;
+    --deep-cacao: #3D2C2E;
+}
+/* Add your Google Fonts import here if you have one, for Recoleta and Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Recoleta:wght@700&display=swap' );
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--cream-parchment);
+    color: var(--deep-cacao);
+}
+header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo, .logo a {
+    font-family: 'Recoleta', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vibrant-umber);
+    text-decoration: none;
+}
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: var(--deep-cacao); font-weight: 600; }
+nav ul li a:hover { color: var(--vibrant-umber); }
+main { padding: 2rem 0; }
+#hero {
+    text-align: center;
+    padding: 4rem 20px;
+}
+#hero h1 {
+    font-family: 'Recoleta', serif;
+    font-size: 3.5rem;
+    color: var(--vibrant-umber);
+    margin: 0;
+}
+#hero p { font-size: 1.2rem; margin-top: 1rem; }
+.cta-button {
+    display: inline-block;
+    background-color: var(--vibrant-umber);
+    color: var(--cream-parchment);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 2rem;
+    transition: transform 0.2s;
+}
+.cta-button:hover { transform: scale(1.05); }
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+.content-page { max-width: 800px; margin: 0 auto; padding: 2rem 20px; background: #fff; border-radius: 8px; }
+.content-page h2 { font-family: 'Recoleta', serif; font-size: 2.5rem; color: var(--vibrant-umber); }
+.creed { margin-top: 2rem; }
+.creed h3 { font-family: 'Recoleta', serif; }
+.form-container { margin-top: 2rem; }
+form label { display: block; margin-bottom: 5px; font-weight: 600; }
+form input { width: 100%; padding: 10px; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+form button { width: 100%; background-color: var(--vibrant-umber); color: var(--cream-parchment); padding: 12px; border: none; border-radius: 5px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+#form-feedback { margin-bottom: 1rem; font-weight: bold; padding: 10px; border-radius: 4px; display: none; }
+#form-feedback.feedback-success { display: block; color: #2E7D32; background-color: #E8F5E9; }
+#form-feedback.feedback-error { display: block; color: #C62828; background-color: #FFEBEE; }
+#form-feedback.feedback-neutral { display: block; color: var(--deep-cacao); background-color: #f4f4f4; }
