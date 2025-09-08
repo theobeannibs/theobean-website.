@@ -1,0 +1,9 @@
+# This rule protects the investor directory
+/investors/*
+  Basic-Auth: theobean-investor:SunKissedEarth!
+
+# These rules apply security headers to all pages
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Content-Security-Policy: frame-ancestors 'none'
