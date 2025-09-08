@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Room - Theobean Protocol</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="/">THEOBEAN</a></div>
+        </nav>
+    </header>
+    <main>
+        <section class="content-page">
+            <h2>Welcome, Inner Circle</h2>
+            <p>This is the secure area for registered investors. Here you will find project updates, financial reports, and governance proposals.</p>
+            <h3>Founder's Ledger</h3>
+            <p>Coming soon: A digital monument to our first supporters.</p>
+            <h3>SAFE & Token Warrant Documents</h3>
+            <p>Documents will be available here for review.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ethermento LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
