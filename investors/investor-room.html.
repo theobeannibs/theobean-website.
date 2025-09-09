@@ -16,10 +16,18 @@
         <section class="content-page">
             <h2>Welcome, Inner Circle</h2>
             <p>This is the secure area for registered investors. Here you will find project updates, financial reports, and governance proposals.</p>
-            <h3>Founder's Ledger</h3>
-            <p>Coming soon: A digital monument to our first supporters.</p>
-            <h3>SAFE & Token Warrant Documents</h3>
-            <p>Documents will be available here for review.</p>
+            <div class="creed">
+                <h3>SAFE & Token Warrant Documents</h3>
+                <p>All fundraising documents are available for review. Please contact us with any questions.</p>
+            </div>
+            <div class="creed">
+                <h3>The Four-Eyes Protocol</h3>
+                <p>All treasury funds are managed via a Gnosis Safe multi-signature wallet, requiring multiple approvals for any transaction, ensuring the highest level of financial security.</p>
+            </div>
+            <div class="creed">
+                <h3>Web3 Wallet Connection</h3>
+                <p>Connect your wallet to view your $THEOBEAN token balance and participate in governance. (Functionality coming soon).</p>
+            </div>
         </section>
     </main>
     <footer>
