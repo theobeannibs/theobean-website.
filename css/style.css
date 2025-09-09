@@ -208,4 +208,28 @@ form button:hover {
 #form-feedback.feedback-success { display: block; color: var(--success-green); background-color: var(--light-green-bg); }
 #form-feedback.feedback-error { display: block; color: var(--error-red); background-color: var(--light-red-bg); }
 #form-feedback.feedback-neutral { display: block; color: var(--deep-cacao); background-color: var(--neutral-bg); }
+/* ------------------------- */
+/* 5. MASCOT STYLES          */
+/* ------------------------- */
+.mascot-container {
+    margin-bottom: 2rem;
+}
+.mascot-image {
+    max-width: 200px; /* You can adjust this size */
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation for the mascot */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
