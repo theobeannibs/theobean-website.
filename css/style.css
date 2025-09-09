@@ -1,19 +1,22 @@
-/* THEOBEAN - Sun-Kissed Earth Palette v1.0 by Wei */
-/* Philosophy: Harmony, Flow, and Purpose */
+/* THEOBEAN - Mascot-Inspired Design Language v1.0 */
+/* Philosophy: Organic tech, trustworthy warmth, and solid reliability. */
 
 /* ------------------------- */
 /* 1. FOUNDATION & VARIABLES */
 /* ------------------------- */
 :root {
-    --vibrant-umber: #A14F2A;
+    /* Mascot Palette */
+    --chocolate-brown: #3D2C2E; /* Deep Cacao */
+    --chocolate-highlight: #A14F2A; /* Vibrant Umber */
+    --tech-glow: #00BFFF; /* Deep Sky Blue for the circuit glow */
+    --background-parchment: #FDFBF5;
+    --text-primary: #3D2C2E;
+    --text-secondary: #5c5052;
+    
+    /* Supporting Colors */
     --mango-zest: #FFC947;
-    --cream-parchment: #FDFBF5;
-    --deep-cacao: #3D2C2E;
     --success-green: #2E7D32;
     --error-red: #C62828;
-    --light-green-bg: #E8F5E9;
-    --light-red-bg: #FFEBEE;
-    --neutral-bg: #f4f4f4;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Recoleta:wght@600;700&display=swap' );
@@ -23,11 +26,11 @@
 /* ------------------------- */
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px; /* Slightly larger for better readability */
+    line-height: 1.8;
     margin: 0;
-    background-color: var(--cream-parchment);
-    color: var(--deep-cacao);
+    background-color: var(--background-parchment);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -35,21 +38,20 @@ body {
 h1, h2, h3 {
     font-family: 'Recoleta', serif;
     font-weight: 700;
-    color: var(--vibrant-umber);
+    color: var(--chocolate-brown);
 }
 
-h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.5rem; }
-p { margin-bottom: 1rem; }
+h1 { font-size: 3.2rem; line-height: 1.2; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.4rem; color: var(--chocolate-highlight); }
 
 /* ------------------------- */
 /* 3. LAYOUT & NAVIGATION    */
 /* ------------------------- */
 header {
-    background: rgba(253, 251, 245, 0.8); /* Semi-transparent parchment */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #EAE0D5;
+    background: rgba(253, 251, 245, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(61, 44, 46, 0.1);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -69,167 +71,143 @@ nav {
     font-family: 'Recoleta', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--vibrant-umber);
+    color: var(--chocolate-brown);
     text-decoration: none;
 }
 
-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
-nav ul li { margin-left: 35px; }
 nav ul li a {
-    text-decoration: none;
-    color: var(--deep-cacao);
     font-weight: 600;
-    position: relative;
-    padding-bottom: 5px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
 }
-/* Underline effect for navigation */
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--vibrant-umber);
-    transition: width 0.3s ease-in-out;
-}
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-main {
-    padding: 2rem 0;
+nav ul li a:hover {
+    color: var(--chocolate-highlight);
 }
 
 footer {
     text-align: center;
-    padding: 3rem 0;
+    padding: 4rem 2rem;
     margin-top: 4rem;
-    background-color: var(--deep-cacao);
-    color: var(--cream-parchment);
+    background-color: var(--chocolate-brown);
+    color: var(--background-parchment);
+}
+footer p {
+    margin: 0.5rem 0;
+    color: rgba(253, 251, 245, 0.7);
 }
 footer a { color: var(--mango-zest); }
 
 /* ------------------------- */
-/* 4. COMPONENTS & SECTIONS  */
+/* 4. MASCOT-INSPIRED COMPONENTS */
 /* ------------------------- */
 
-/* Hero Section */
+/* Hero Section - Reflecting the mascot's presence */
 #hero {
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem 5rem 2rem;
 }
-#hero p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 1rem auto 0 auto;
-    color: #5a4e4f;
-}
-
-/* Standard Content Page */
-.content-page {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 3rem;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(61, 44, 46, 0.05);
+.mascot-image {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 2rem;
+    animation: float 4s ease-in-out infinite;
+    /* Adding a subtle glow like the mascot */
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.3));
 }
 
-/* Creed Section */
-.creed {
-    margin-top: 2.5rem;
-    padding-left: 1.5rem;
-    border-left: 3px solid var(--mango-zest);
-}
-
-/* Buttons */
+/* Buttons - Solid, trustworthy, with a hint of glow on hover */
 .cta-button {
     display: inline-block;
-    background-color: var(--vibrant-umber);
-    color: var(--cream-parchment);
-    padding: 14px 35px;
+    background-color: var(--chocolate-highlight);
+    color: var(--background-parchment);
+    padding: 15px 40px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px; /* Rounded corners like the mascot's limbs */
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(161, 79, 42, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 20px rgba(61, 44, 46, 0.15);
 }
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(161, 79, 42, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2); /* Tech glow shadow */
+    border-color: var(--tech-glow);
 }
 
-/* Forms */
-.form-container { margin-top: 2rem; }
-form label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+/* Content Sections - Clean, with solid dividers */
+.content-feature, .content-page {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 16px; /* More pronounced rounded corners */
+    border: 1px solid rgba(61, 44, 46, 0.1);
+    box-shadow: 0 10px 40px rgba(61, 44, 46, 0.07);
+}
+
+/* Forms - Inspired by the chocolate bar segments */
+.form-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--background-parchment);
+    border-radius: 12px;
+    border: 1px solid rgba(61, 44, 46, 0.1);
+}
 form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 1.5rem;
-    border: 1px solid #EAE0D5;
+    background-color: #fff;
+    border: 1px solid rgba(61, 44, 46, 0.15);
     border-radius: 8px;
-    box-sizing: border-box;
-    background-color: var(--cream-parchment);
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
 form input:focus {
     outline: none;
-    border-color: var(--mango-zest);
-    box-shadow: 0 0 0 3px rgba(255, 201, 71, 0.3);
+    border-color: var(--tech-glow);
+    box-shadow: 0 0 0 4px rgba(0, 191, 255, 0.2);
 }
 form button {
-    width: 100%;
-    background: var(--vibrant-umber);
-    color: var(--cream-parchment);
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: var(--chocolate-brown); /* Solid, dark chocolate button */
 }
 form button:hover {
-    background: var(--deep-cacao);
-    transform: translateY(-2px);
+    background: var(--chocolate-highlight);
 }
 
-/* Form Feedback Messages */
-#form-feedback {
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    padding: 12px;
-    border-radius: 8px;
-    display: none; /* Hidden by default */
+/* WhatsApp Button */
+.whatsapp-button {
+    display: inline-block;
+    background-color: var(--whatsapp-green);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
 }
-#form-feedback.feedback-success { display: block; color: var(--success-green); background-color: var(--light-green-bg); }
-#form-feedback.feedback-error { display: block; color: var(--error-red); background-color: var(--light-red-bg); }
-#form-feedback.feedback-neutral { display: block; color: var(--deep-cacao); background-color: var(--neutral-bg); }
-/* ------------------------- */
-/* 5. MASCOT STYLES          */
-/* ------------------------- */
-.mascot-container {
-    margin-bottom: 2rem;
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
 }
-.mascot-image {
-    max-width: 200px; /* You can adjust this size */
-    height: auto;
-    animation: float 4s ease-in-out infinite;
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--text-secondary);
 }
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(61, 44, 46, 0.1);
+}
+.divider:not(:empty)::before { margin-right: .5em; }
+.divider:not(:empty)::after { margin-left: .5em; }
 
 /* Floating animation for the mascot */
 @keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
 }
 
