@@ -20,28 +20,23 @@
     <main>
         <section class="content-page">
             <h2>Join the Protocol</h2>
-            <p>Register your farm to become part of a new, equitable supply chain. Secure your craft and your future.</p>
-            
+            <p>Register your farm to become part of a new, equitable supply chain. We offer two simple ways to connect.</p>
             <div class="whatsapp-container">
-                <h3>Register via WhatsApp</h3>
-                <p>Click the button below to start the registration process directly in WhatsApp. It's fast and easy.</p>
-                <a href="https://wa.me/18095551234?text=Register" class="whatsapp-button" target="_blank">Register with WhatsApp</a>
+                <h3>Option 1: Register via WhatsApp</h3>
+                <p>The easiest way to join. Click the button below to start the registration process directly in WhatsApp.</p>
+                <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Register" class="whatsapp-button" target="_blank">Register with WhatsApp</a>
                 <div class="divider"><span>OR</span></div>
             </div>
-
             <div class="form-container">
-                <h3>Register Below</h3>
+                <h3>Option 2: Register Below</h3>
                 <form id="farmer-registration-form">
                     <div id="form-feedback"></div>
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
-
                     <label for="phone">WhatsApp Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
-
                     <label for="province">Province:</label>
                     <input type="text" id="province" name="province" required>
-
                     <button type="submit">Submit Registration</button>
                 </form>
             </div>
@@ -55,17 +50,11 @@
             event.preventDefault();
             const form = event.target;
             const button = form.querySelector('button');
-            const data = {
-                name: form.name.value,
-                phone: form.phone.value,
-                province: form.province.value
-            };
+            const data = { name: form.name.value, phone: form.phone.value, province: form.province.value };
             const feedbackEl = document.getElementById('form-feedback');
-
             button.disabled = true;
             feedbackEl.textContent = 'Submitting...';
             feedbackEl.className = 'feedback-neutral';
-
             try {
                 const response = await fetch('/.netlify/functions/register-farmer', {
                     method: 'POST',
@@ -73,10 +62,7 @@
                     body: JSON.stringify(data)
                 });
                 const result = await response.json();
-                if (!response.ok) {
-                    throw new Error(result.message || 'An unknown error occurred.');
-                }
-                
+                if (!response.ok) throw new Error(result.message || 'An unknown error occurred.');
                 feedbackEl.textContent = 'Registration successful! We will be in contact soon.';
                 feedbackEl.className = 'feedback-success';
                 form.reset();
