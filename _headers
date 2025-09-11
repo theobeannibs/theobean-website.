@@ -1,6 +1,0 @@
-/investors/*
-  Basic-Auth: theobean-investor:SunKissedEarth!
-
-/*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block

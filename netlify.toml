@@ -1,7 +1,28 @@
 [build]
-  command = "npm install"
+  command = "npm run build"
+  publish = "app/.next"
   functions = "netlify/functions"
-  publish = "/"
 
-[functions]
-  included_files = ["src/**"]
+[[edge_functions]]
+  function = "protect-investor-room"
+  path = "/investor-room"
+
+[[scheduled_functions]]
+  name = "settle-payouts"
+  path = "netlify/schedules/settle-payouts.ts"
+  schedule = "0 0 * * *"
+
+[[scheduled_functions]]
+  name = "rotate-keys"
+  path = "netlify/schedules/rotate-keys.ts"
+  schedule = "0 1 * * *"
+
+[[scheduled_functions]]
+  name = "anomaly-scan"
+  path = "netlify/schedules/anomaly-scan.ts"
+  schedule = "0 */6 * * *"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

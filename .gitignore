@@ -1,0 +1,7 @@
+node_modules
+.env
+app/.next
+.DS_Store
+
+# Netlify
+netlify/edge-functions/manifest.json
